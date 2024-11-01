@@ -1,29 +1,39 @@
 
 
-export const App= () => {
-  return( 
+export const App = () => {
+  return (
     <>
-          <InnovaHycross />   { /* Here the component called it will execute all the code in this component   */}
-          <InnovaHycross />
-          <InnovaHycross /> 
-    </>  //react Fragment code syntax it removes one un non required node 
+      <InnovaHycross />   { /* Here the component called it will execute all the code in this component   */}
+      <InnovaHycross />
+      <InnovaHycross />
+    </>  //react Fragment code syntax it removes one non required node 
   )
 };
 
 
 // COMPONENT defination 
-const InnovaHycross = () => { {/*Component name must be in PascalCasec */}
-  return(
+const InnovaHycross = () => {
+  {/*Component name must be in PascalCasec */ }
+
+  let image = "attitude-black.png";
+  let name = "Innova Hycross";
+  let rating = 5;
+  let summary = "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quaerat aliquam, pariatur sint deserunt amet voluptate suscipit veniam ullam ex praesentium numquam facilis dolore vel doloribus ratione ad perferendis maxime!"
+
+  const returnGenre=()=>{
+    const genre ="RomCom";
+    return genre;
+  }
+
+
+  return (
     <div>
       <div>
-        <img src="attitude-black.png" alt="attitude-black.png" 
-        width="50%" height="40%" />
-        <h2>Name:Innova Hycross</h2>
-        <h3>Safety Ratings : 5 Star</h3>
-
-        <p>
-          Summary: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quaerat aliquam, pariatur sint deserunt amet voluptate suscipit veniam ullam ex praesentium numquam facilis dolore vel doloribus ratione ad perferendis maxime!
-        </p>
+        <img src={image} alt="attitude-black.png" width="50%" height="40%" />
+        <h2>Name: {name} </h2>
+        <h3>Safety Ratings : {rating} Star</h3>
+        <p>Summary: {summary}</p>          {/*//variables can be used in JSX */}
+        <p>Genre : {returnGenre()}</p>   {/* We can use fuctions as dynamically insert data*/}
       </div>
     </div>
   )
