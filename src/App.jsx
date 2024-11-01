@@ -1,10 +1,12 @@
+
+
 export const App= () => {
   return( 
-    <div>
+    <>
           <InnovaHycross />   { /* Here the component called it will execute all the code in this component   */}
           <InnovaHycross />
           <InnovaHycross /> 
-    </div>
+    </>  //react Fragment code syntax it removes one un non required node 
   )
 };
 
